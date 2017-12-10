@@ -5,5 +5,9 @@
 %              effector position to reach <position>
 %              (orientation is to be ignored)
 function q = Q1(f,position)
-
+    disp(f)
+    disp(position)
+    disp(position(1))
+    tmatrix=[1,0,0,position(1);0,1,0,position(2);0,0,1,position(3);0,0,0,1]
+    q = f.ikine(tmatrix)
 end
